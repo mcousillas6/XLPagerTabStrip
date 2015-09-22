@@ -210,7 +210,7 @@
 {
     CGFloat distance = [self getDistanceValue];
     BOOL isPortrait = UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation);
-    CGFloat labelHeighSpace = isPortrait ? 34: 25;
+    CGFloat labelHeighSpace = self.navigationController.navigationBar.frame.size.height/2;;
     [self.navigationItemsViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         int index = (int)idx;
         UILabel *label = (UILabel *)obj;
